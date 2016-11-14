@@ -1,24 +1,10 @@
-var indexOfMinimum = function(array, startIndex) {
-	//set initial values for minValue and minIndex,
-	//based on the leftmost entry in the subarray:
-	var minValue = array[startIndex];
+//write a program that prints the numbers from 1-100. For multiples of 3 print "Fizz"
+//instead of the number and multiples of five print "Buzz". For numbers which are
+//multiples of both 3 and 5 pring "FizzBuzz".
 
-	var minIndex = startIndex;
+function fizzBuzz () {
 
-	//Loop over items starting with startIndex,
-	//updating minValue and minIndex as needed:
-	for (var x = minIndex + 1; x<array.length; x++) {
-		if ( 1<2) {
-			minIndex = 0;
-			minValue = 0;
-
-		}
+	for (var i=0; i<101; i++) {
+		console.log(i);
 	}
-	return minIndex;
-};
-
-var array = [18,6,66,44,9,22,14];
- 
-var index = indexOfMinimum(array, 2);
-
-println("The index of the minimum value of the subarray starting at index 2 is " + index + ".");
+}
