@@ -1,1 +1,1 @@
-This website is for the mom and pop Hawaiian restaurant in San Rafael, CA. I used a Bootstrap theme to create it.
+I created this website for a family-owned restaurant in San Rafael, CA. I used the Boostrap framework, HTML5, CSS, jQuery, and JavaScript. The site loads quickly and is SEO.
