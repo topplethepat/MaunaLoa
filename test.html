@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="css/bootstrap.min.css"> 
+ </head>
+ <body>      
+  
+ <img height="100" width="80" id="1" data-toggle="modal" data-target="#myModal" src='img/CCombination-min.jpg"' alt='chicken combo' />
+<img height="100" width="80" id="2" data-toggle="modal" data-target="#myModal" src='img/CEggRolls-min.jpg' alt='egg rolls'/>
+<div class = "row">
+            <div class="col-md-2 text-center"></div>
+            <div class="col-md-2 text-center">
+                <img class="img-responsive"src="img/Coconut-ShrimpR-min.jpg" alt="Coconut Shrimp" id="5" data-toggle="modal" data-target="#myModal">
+                
+            </div>
+            <div class="col-md-2 text-center">
+                <img class="img-responsive" src="img/LChickenKatsu-min.jpg" alt="Chicken Katsu" id="6" data-toggle="modal" data-target="#myModal">
+               
+            </div></div>
+<script>  
+// var insert = function(array, rightIndex, value) {
+//     var x;
+
+    //goes backwards through array checking until it's at array[0]
+    //or x is less than the value
+    // for (x=rightIndex; x>=0 && array[x]>value; x--) {
+    	//when it stops then it moves the rightIndex over to the right
+    //     array[x+1] = array[x];
+    //     console.log([x+1]);
+    //     console.log(array[x]);
+    // }
+    // console.log([x+1]);
+    //now the rightIndex is at the place where "value" needs to go
+//     array[x+1] = value;
+//     console.log(value);
+// };
+// var array = [3, 5, 7, 11, 13, 2, 9, 6];
+// insert(array, 4, 2);
+
+var firstCharacter = function(str) {
+  return str.slice(0,1);
+  console.log(str.slice(0,1));
+  console.log("ya");
+  
+}
+
+firstCharacter("name");
+
+
+
+
+</script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+     <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+       <script>
+    $('img').on('click', function () {
+        var image = $(this).attr('src');
+       
+        $('#myModal').on('show.bs.modal', function () {
+            $(".showimage").attr("src", image);
+            });
+    });
+    </script> 
+</body>
+</html>
