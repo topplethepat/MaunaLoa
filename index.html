@@ -16,7 +16,7 @@
             background-repeat: no-repeat;
         }
         .page-margin{padding-top:10px;padding-bottom:10px;text-align:center;color:brown}#site-title{height:350px;width:350px;padding-top:40px;text-align:center}#page1{height:745px}#page3{height:575px background-color: white}#page4{height:475px;background-color:white}a{color:brown}h2{text-align:center;color:brown}h3{text-align:center;color:brown}h4{text-align:center;color:brown}h5{text-align:center;color:brown}#page2{background-color:white}@media screen and (min-width:320px){#page2{height:1400px}}@media screen and (max-width:500px){#page2{height:1450px}}@media screen and (min-width:501px){#page2{height:1200px}}@media screen and (min-width:600px){#page2{height:1200px}}@media screen and (min-width:768px){#page2{height:700px}}@media screen and (min-width:1600px){#page2{height:550px}h1{font-size:4em}}
-
+   
         
     </style>
 </head>
@@ -125,11 +125,11 @@
                
             </div>
                <div class="col-md-2 text-center">
-                <img class="img-responsive"src="img/Loco-MocoR-min1.jpg" alt="Loco Moco" id="7" data-toggle="modal" data-target="#myModal">
+                <img class="img-responsive"src="img/Loco-MocoR-min.jpg" alt="Loco Moco" id="7" data-toggle="modal" data-target="#myModal">
                
             </div>
             <div class="col-md-2 text-center">
-                <img class="img-responsive" src="img/LKaluaPork-min1.jpg" alt="Kalua Pork" id="8" data-toggle="modal" data-target="#myModal">
+                <img class="img-responsive" src="img/LKaluaPork-min.jpg" alt="Kalua Pork" id="8" data-toggle="modal" data-target="#myModal">
                 
             </div>
             <div class="col-md-2 text-center"></div>
@@ -138,7 +138,7 @@
      <div class="row">
             <div class="col-md-2 text-center"></div>
             <div class="col-md-2 text-center">
-                <img class="img-responsive" src="img/LSaimin-min1.jpg" alt="Saimin" id="9" data-toggle="modal" data-target="#myModal">
+                <img class="img-responsive" src="img/LSaimin-min.jpg" alt="Saimin" id="9" data-toggle="modal" data-target="#myModal">
                
             </div>
             <div class="col-md-2 text-center">
@@ -239,12 +239,12 @@ The siblings' family is mostly Chinese and their father ran Chinese restaurants 
      <div class = "page-margin"></div>
      <div class="container w960">
       <div class="row">
-      
-       <form method="post" action="contact.php" id="contactform">
-          <input name="name" type="text" class="col-md-6" placeholder="Your Name *" >
-          <input name="email" type="email" class="col-md-6" placeholder="E-mail address *" ><br><br>
+       <form action="https://formspree.io/lenore.alford@gmail.com" input type="email" id="contact-form" method="post" name="_replyto"  role="form">
+       <!-- <form method="post" action="contact.php" id="contactform"> -->
+          <input name="name" id = "name" type="text" class="col-md-6" placeholder="Your Name *" >
+          <input name="email" id = "email" type="email" class="col-md-6" placeholder="E-mail address *" ><br><br>
           <div class = "page-margin"></div>
-          <textarea name="comment"  class="form-control" rows="5" cols="12"placeholder="Message *"></textarea>
+          <textarea name="comment" id = "comment" class="form-control" rows="5" cols="12"placeholder="Message *"></textarea>
           
           <div class = "page-margin"></div>
           <input type="submit" id="submit" class="contact submit" style="background-color: black; color: white" value="Send message">
