@@ -3,55 +3,101 @@
 
 <head>
     <meta charset="UTF-8">
-      
- </head>
- <body>      
-  
-
-<script> 
-//square integer function
-
-var intSqu = function(n) {
-  var result = n * n;
-  document.write(result);
-
+    <style>
+    a {
+  color: #0254EB
 }
-intSqu(9);
-
-// var insert = function(array, rightIndex, value) {
-//     var x;
-
-    //goes backwards through array checking until it's at array[0]
-    //or x is less than the value
-    // for (x=rightIndex; x>=0 && array[x]>value; x--) {
-    	//when it stops then it moves the rightIndex over to the right
-    //     array[x+1] = array[x];
-    //     console.log([x+1]);
-    //     console.log(array[x]);
-    // }
-    // console.log([x+1]);
-    //now the rightIndex is at the place where "value" needs to go
-//     array[x+1] = value;
-//     console.log(value);
-// };
-// var array = [3, 5, 7, 11, 13, 2, 9, 6];
-// insert(array, 4, 2);
-
-var firstCharacter = function(str) {
-  return str.slice(0,1);
-  console.log(str.slice(0,1));
-  console.log("ya");
-  
+a:visited {
+  color: #0254EB
 }
-
-firstCharacter("name");
-
-
-
-
-</script>
+a.morelink {
+  text-decoration:none;
+  outline: none;
+}
+.morecontent span {
+  display: none;
+}
+.comment {
+  width: 400px;
+  
+  margin: 10px;
+}
+  </style>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+ </head>
+ <body>
+  <div class="comment more">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum laoreet, nunc eget laoreet sagittis,
+  quam ligula sodales orci, congue imperdiet eros tortor ac lectus.
+  Duis eget nisl orci. Aliquam mattis purus non mauris
+  blandit id luctus felis convallis.
+  Integer varius egestas vestibulum.
+  Nullam a dolor arcu, ac tempor elit. Donec.
+</div>
+<div class="comment more">
+  CourageAmerica is a forum for the presentation and exchange of ideas, opinions, and information that contribute to the recognition and strengthening of those ideals and principles that make America great.<br/>
+                                         
+                                         From the "dot.com" implosion, to the infamy of 9/11, to the expensive and immoral wars and wanton waste of our young people and resources, to the economic meltdown of 2008, to today's struggling economy and divisive election, we have lived through a most challenging and discouraging early 21st Century. Our polictical parties seem to have lost sight of what is important in America, they have lost touch with the people and the will of the people. Our government seems to have joined hands with the Princes of Wall Street to plunder and pillage our economic welfare.It is increasingly obvious that we, the people of the United States must become active and assume the mantle of leadership in restoring the strength, honor, integrity and economy of America. We must stand strong in our resolve for freedom, for a fair and just society, for economic growth, oppotrunity and stability, We must unite to recognize the equality of all humankind. <br><br>    
+
+
+</div>
+<div class="comment more">
+  consectetur adipiscing elit. Proin blandit nunc sed sem dictum id feugiat quam blandit.
+  Donec nec sem sed arcu interdum commodo ac ac diam. Donec consequat semper rutrum.
+  Vestibulum et mauris elit. Vestibulum mauris lacus, ultricies.
+</div>
+  <script>
+  $(document).ready(function() {
+  var showChar = 100;
+  var ellipsestext = "...";
+  var moretext = "more";
+  var lesstext = "less";
+  $('.more').each(function() {
+    var content = $(this).html();
+
+    if(content.length > showChar) {
+
+      var c = content.substr(0, showChar);
+      var h = content.substr(showChar-1, content.length - showChar);
+
+      var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+      $(this).html(html);
+    }
+
+  });
+
+  $(".morelink").click(function(){
+    if($(this).hasClass("less")) {
+      $(this).removeClass("less");
+      $(this).html(moretext);
+    } else {
+      $(this).addClass("less");
+      $(this).html(lesstext);
+    }
+    $(this).parent().prev().toggle();
+    $(this).prev().toggle();
+    return false;
+  });
+});
+  </script>
+  CourageAmerica is a forum for the presentation and exchange of ideas, opinions, and information that contribute to the recognition and strengthening of those ideals and principles that make America great.<br/>
+                                         
+                                         From the "dot.com" implosion, to the infamy of 9/11, to the expensive and immoral wars and wanton waste of our young people and resources, to the economic meltdown of 2008, to today's struggling economy and divisive election, we have lived through a most challenging and discouraging early 21st Century. Our polictical parties seem to have lost sight of what is important in America, they have lost touch with the people and the will of the people. Our government seems to have joined hands with the Princes of Wall Street to plunder and pillage our economic welfare.It is increasingly obvious that we, the people of the United States must become active and assume the mantle of leadership in restoring the strength, honor, integrity and economy of America. We must stand strong in our resolve for freedom, for a fair and just society, for economic growth, oppotrunity and stability, We must unite to recognize the equality of all humankind. <br><br>    
+
+
+
+
+
+
+
+
+
+
+
+ 
      <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 
        <script>
